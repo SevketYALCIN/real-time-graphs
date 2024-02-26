@@ -63,30 +63,29 @@ export default function Graph() {
 	})
 
 	return (
-		<div>
+		<div style={{ width: "100%" }}>
 			{query.isLoading ? <span>Loading</span> : (
-				<Fragment>
-					<div style={{ width: '300px', display: 'inline-block' }}>
-						<Bar
-							data={{
-								labels: query.data.map((product) => product.name),
-								datasets: [
-									{
-										label: "Sales",
-										data: query.data.map((product) => product.sales),
-										backgroundColor: 'green'
-									}
-								]
-							}} />
-
-						<button onClick={() => {
+				<div className='graph-wrapper'>
+					<Bar
+						data={{
+							labels: query.data.map((product) => product.name),
+							datasets: [
+								{
+									label: "Sales",
+									data: query.data.map((product) => product.sales),
+									backgroundColor: 'green'
+								}
+							]
+						}} />
+					<div className='flexbox center'>
+						<button className='button-3' onClick={() => {
 							mutation.mutate()
 						}}
 						>
 							Edit random product sales
 						</button>
 					</div>
-				</Fragment>
+				</div>
 			)}
 		</div>
 	)
