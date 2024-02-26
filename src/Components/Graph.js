@@ -63,7 +63,7 @@ export default function Graph() {
 	})
 
 	return (
-		<div style={{ width: "100%" }}>
+		<div className='graph flexbox center'>
 			{query.isLoading ? <span>Loading</span> : (
 				<div className='graph-wrapper'>
 					<Bar

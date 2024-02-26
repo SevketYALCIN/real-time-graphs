@@ -12,11 +12,16 @@ code {
     monospace;
 }
 
+.graph {
+  width: 100%;
+}
+
 .graph-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 20px;
   gap: 20px;
+  width: 600px;
+  padding-top: 20px;
 }
 
 .flexbox {
